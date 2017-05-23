@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ULatina.PrograAvanzada.Inic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{618FDACF-8781-4CB0-8D30-7BFF9539CAF6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicacionWeb", "AplicacionWeb\AplicacionWeb.csproj", "{9589F660-0812-430C-94D7-7DD1C65A4386}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{618FDACF-8781-4CB0-8D30-7BFF9539CAF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{618FDACF-8781-4CB0-8D30-7BFF9539CAF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{618FDACF-8781-4CB0-8D30-7BFF9539CAF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9589F660-0812-430C-94D7-7DD1C65A4386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9589F660-0812-430C-94D7-7DD1C65A4386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9589F660-0812-430C-94D7-7DD1C65A4386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9589F660-0812-430C-94D7-7DD1C65A4386}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
