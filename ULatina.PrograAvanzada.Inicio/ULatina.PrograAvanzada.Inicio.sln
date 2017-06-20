@@ -8,6 +8,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{618FDACF-8781-4CB0-8D30-7BFF9539CAF6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicacionWeb", "AplicacionWeb\AplicacionWeb.csproj", "{9589F660-0812-430C-94D7-7DD1C65A4386}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D1BD520B-39E3-4CAC-90B9-D4DBAC64C800} = {D1BD520B-39E3-4CAC-90B9-D4DBAC64C800}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLAplicacionWeb", "BLAplicacionWeb\BLAplicacionWeb.csproj", "{D1BD520B-39E3-4CAC-90B9-D4DBAC64C800}"
 EndProject

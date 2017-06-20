@@ -12,6 +12,17 @@ namespace BLAplicacionWeb
     [ServiceContract]
     public interface IService1
     {
+        [OperationContract]
+        double Sumar(double valor1, double valor2);
+
+        [OperationContract]
+        double Restar(double valor1, double valor2);
+
+        [OperationContract]
+        double Multiplicar(double valor1, double valor2);
+
+        [OperationContract]
+        double Dividir(double valor1, double valor2);
 
         [OperationContract]
         string WhatDateIsToday();

@@ -65,8 +65,16 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dominio\Acciones\Dividir.cs" />
+    <Compile Include="Dominio\Acciones\Multiplicar.cs" />
     <Compile Include="Dominio\Acciones\ObtenerFechaActual.cs" />
+    <Compile Include="Dominio\Acciones\Restar.cs" />
+    <Compile Include="Dominio\Acciones\Sumar.cs" />
     <Compile Include="Dominio\Especificaciones\ObtengaFecha.cs" />
+    <Compile Include="Dominio\Especificaciones\ReliceLaDivision.cs" />
+    <Compile Include="Dominio\Especificaciones\ReliceLaMultiplicacion.cs" />
+    <Compile Include="Dominio\Especificaciones\ReliceLaResta.cs" />
+    <Compile Include="Dominio\Especificaciones\ReliceSuma.cs" />
     <Compile Include="Dominio\Servicios\Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>
@@ -85,6 +93,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -48,6 +48,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -66,9 +68,29 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Connected Services\OperacionesMatematicas\AplicacionWeb.OperacionesMatematicas.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\OperacionesMatematicas\Service1.disco" />
+    <None Include="Connected Services\OperacionesMatematicas\configuration91.svcinfo" />
+    <None Include="Connected Services\OperacionesMatematicas\configuration.svcinfo" />
+    <None Include="Connected Services\OperacionesMatematicas\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="HelloWorld.aspx" />
     <Content Include="HTMLPage1.html" />
     <Content Include="packages.config" />
+    <None Include="Connected Services\OperacionesMatematicas\Service1.wsdl" />
+    <None Include="Connected Services\OperacionesMatematicas\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OperacionesMatematicas\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OperacionesMatematicas\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -80,6 +102,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Acciones\InvocarALaSuma.cs" />
+    <Compile Include="Connected Services\OperacionesMatematicas\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="HelloWorld.aspx.cs">
       <DependentUpon>HelloWorld.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -88,6 +116,12 @@
       <DependentUpon>HelloWorld.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\OperacionesMatematicas\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

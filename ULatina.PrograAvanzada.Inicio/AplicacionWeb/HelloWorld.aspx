@@ -18,6 +18,12 @@
             Parámetros de entrada:<asp:Calendar ID="cldFechaDeEntrada" runat="server" OnSelectionChanged="cldFechaDeEntrada_SelectionChanged"></asp:Calendar>
             <br />
             Fecha seleccionada: <asp:Label ID="lblFechaSeleccionada" runat="server" Text="Label"></asp:Label>
+            <br />
+            <br />
+            <asp:TextBox ID="txtValor1" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtValor2" runat="server"></asp:TextBox>
+            <asp:Button ID="btnSumar" runat="server" OnClick="btnSumar_Click" Text="Sumar" />
+            <asp:Label ID="lblResultadoSuma" runat="server"></asp:Label>
         </div>
     </form>
 </body>

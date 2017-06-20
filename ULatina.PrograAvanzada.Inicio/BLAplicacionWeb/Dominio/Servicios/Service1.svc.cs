@@ -12,6 +12,44 @@ namespace BLAplicacionWeb
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
+        public double Sumar(double valor1, double valor2)
+        {
+            double resultado;
+            var laAccion = new Dominio.Acciones.Sumar();
+            resultado = laAccion.CalcularLaSuma(valor1, valor2);
+
+            return resultado;
+        }
+
+        public double Restar(double valor1, double valor2)
+        {
+            double resultado;
+            var laAccion = new Dominio.Acciones.Restar();
+            resultado = laAccion.CalcularLaResta(valor1, valor2);
+
+            return resultado;
+        }
+
+        public double Multiplicar(double valor1, double valor2)
+        {
+            double resultado;
+            var laAccion = new Dominio.Acciones.Multiplicar();
+            resultado = laAccion.CalcularLaMultiplicacion(valor1, valor2);
+
+            return resultado;
+        }
+
+        public double Dividir(double valor1, double valor2)
+        {
+            double resultado;
+            var laAccion = new Dominio.Acciones.Dividir();
+            resultado = laAccion.CalcularLaDivision(valor1, valor2);
+
+            return resultado;
+        }
+
+
+
         public string WhatDateIsToday()
         {
             string elResultado;
