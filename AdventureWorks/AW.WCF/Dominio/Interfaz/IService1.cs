@@ -12,12 +12,24 @@ namespace AW.WCF
     [ServiceContract]
     public interface IService1
     {
+        
+
+        /******************************************************/
 
         [OperationContract]
         string GetData(int value);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
+
+        [OperationContract]
+        Model.Product EncontrarProductoPorNumero(string elNumero);
+
+        [OperationContract]
+        IList<Model.Product> ListarTodos();
+
+        [OperationContract]
+        IList<Model.Product> BuscarProductoPorRangoDePrecio(decimal elPrecioInferior, decimal elPrecioSuperior);
 
         // TODO: Add your service operations here
     }
