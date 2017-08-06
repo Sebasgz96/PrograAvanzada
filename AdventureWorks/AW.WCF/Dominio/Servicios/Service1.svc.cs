@@ -14,7 +14,7 @@ namespace AW.WCF
     {
         public Model.Product EncontrarProductoPorNumero(string elNumero)
         {
-            var laAccion = new Acciones.Productos();
+            var laAccion = new Dominio.Acciones.Productos();
             var elProducto = laAccion.EncontrarProductoPorNumero(elNumero);
             return elProducto;
         }
@@ -22,14 +22,14 @@ namespace AW.WCF
         public IList<Model.Product> ListarTodos()
         {
             decimal elPrecioInferior = 10, elPrecioSuperior = 20;
-            var laAccion = new Acciones.Productos();
+            var laAccion = new Dominio.Acciones.Productos();
             var losProductos = laAccion.BuscarProductoPorRangoDePrecio(elPrecioInferior, elPrecioSuperior);
             return losProductos;
         }
 
         public IList<Model.Product> BuscarProductoPorRangoDePrecio(decimal elPrecioInferior, decimal elPrecioSuperior)
         {
-            var laAccion = new Acciones.Productos();
+            var laAccion = new Dominio.Acciones.Productos();
             var losProductos = laAccion.BuscarProductoPorRangoDePrecio(elPrecioInferior, elPrecioSuperior);
             return losProductos;
         }

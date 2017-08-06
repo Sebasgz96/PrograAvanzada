@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace AW.WCF.Dominio.Especificaciones
 {
     public class Productos
     {
+        public Productos()
+        {
+        }
+
         public Model.Product EncontrarProductoPorNumero(string elNumero)
         {
             var elRepositorio = new Repositorio.Productos();
@@ -20,8 +22,5 @@ namespace AW.WCF.Dominio.Especificaciones
             var losProductos = elRepositorio.BuscarProductoPorRangoDePrecio(elPrecioInferior, elPrecioSuperior);
             return losProductos;
         }
-
     }
-
-    
 }

@@ -89,6 +89,19 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AW.Model\AW.Model.csproj">
+      <Project>{7adf28a8-7a6f-4c44-ad4f-8f6e0b6b4f74}</Project>
+      <Name>AW.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AW.WCF\AW.WCF.csproj">
+      <Project>{e75e0fd9-41f4-4f0c-ac55-3b07490458f5}</Project>
+      <Name>AW.WCF</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
