@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace AdventureWorks6.ViewModels
+namespace AdventureWorks.ViewModels
 {
     public class ProductsViewModel
     {

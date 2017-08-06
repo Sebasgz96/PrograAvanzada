@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using AW.Model;
 
-namespace AdventureWorks6
+namespace AdventureWorks
 {
     public class ProductsController : Controller
     {

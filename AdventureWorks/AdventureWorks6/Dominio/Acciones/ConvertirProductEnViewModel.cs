@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 
 
-namespace AdventureWorks6.Dominio.Acciones
+namespace AdventureWorks.Dominio.Acciones
 {
     public class ConvertirProductEnViewModel
     {

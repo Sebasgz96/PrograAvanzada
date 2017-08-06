@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace AdventureWorks6
+namespace AdventureWorks
 {
     public class AdventureWorks2014EntitiesContext : DbContext
     {
