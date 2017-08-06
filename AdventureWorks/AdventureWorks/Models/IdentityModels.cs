@@ -29,5 +29,11 @@ namespace AdventureWorks.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<AW.Model.Product> Products { get; set; }
+
+        public System.Data.Entity.DbSet<AW.Model.ProductModel> ProductModels { get; set; }
+
+        public System.Data.Entity.DbSet<AW.Model.ProductSubcategory> ProductSubcategories { get; set; }
     }
 }

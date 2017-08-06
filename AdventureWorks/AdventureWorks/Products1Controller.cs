@@ -11,53 +11,18 @@ using AdventureWorks.Models;
 
 namespace AdventureWorks
 {
-    public class ProductsController : Controller
+    public class Products1Controller : Controller
     {
-        private AdventureWorks2014EntitiesContext db = new AdventureWorks2014EntitiesContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Products
+        // GET: Products1
         public ActionResult Index()
         {
-            decimal elPrecioInferior = 20;
-            decimal elPrecioSuperior = (decimal)55.6;
-            var laAccion = new AW.WCF.Dominio.Acciones.Productos();
-            var products = laAccion.BuscarProductoPorRangoDePrecio(elPrecioInferior, elPrecioSuperior);
-            //var products = db.Products.Include(p => p.ProductModel).Include(p => p.ProductSubcategory);
+            var products = db.Products.Include(p => p.ProductModel).Include(p => p.ProductSubcategory);
             return View(products.ToList());
         }
 
-        public ActionResult IndexViewModel()
-        {
-            decimal elPrecioInferior = 20;
-            decimal elPrecioSuperior = (decimal)55.6;
-            var laAccion = new AW.WCF.Dominio.Acciones.Productos();
-            var products = laAccion.BuscarProductoPorRangoDePrecio(elPrecioInferior, elPrecioSuperior);
-            var laAccionViewModel = new Dominio.Acciones.ConvertirProductEnViewModel();
-            var productsViewModel = laAccionViewModel.ConviertaListaDeProductos(products);
-            //var products = db.Products.Include(p => p.ProductModel).Include(p => p.ProductSubcategory);
-            return View(productsViewModel.ToList());
-        }
-
-        // GET: Products/Details/5
-        public ActionResult MisDetallesPorProductNumber(string productNumber)
-        {
-            if (productNumber == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-
-            var laAccion = new AW.WCF.Dominio.Acciones.Productos();
-            Product product = laAccion.EncontrarProductoPorNumero(productNumber);
-
-            //Product product = db.Products.Find(id);
-            if (product == null)
-            {
-                return HttpNotFound();
-            }
-            return View(product);
-        }
-
-        // GET: Products/Details/5
+        // GET: Products1/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -72,7 +37,7 @@ namespace AdventureWorks
             return View(product);
         }
 
-        // GET: Products/Create
+        // GET: Products1/Create
         public ActionResult Create()
         {
             ViewBag.ProductModelID = new SelectList(db.ProductModels, "ProductModelID", "Name");
@@ -80,7 +45,7 @@ namespace AdventureWorks
             return View();
         }
 
-        // POST: Products/Create
+        // POST: Products1/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -99,7 +64,7 @@ namespace AdventureWorks
             return View(product);
         }
 
-        // GET: Products/Edit/5
+        // GET: Products1/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -116,7 +81,7 @@ namespace AdventureWorks
             return View(product);
         }
 
-        // POST: Products/Edit/5
+        // POST: Products1/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -134,7 +99,7 @@ namespace AdventureWorks
             return View(product);
         }
 
-        // GET: Products/Delete/5
+        // GET: Products1/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -149,7 +114,7 @@ namespace AdventureWorks
             return View(product);
         }
 
-        // POST: Products/Delete/5
+        // POST: Products1/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
