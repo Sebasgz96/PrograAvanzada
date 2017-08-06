@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7ADF28A8-7A6F-4C44-AD4F-8F6E0B6B4F74}</ProjectGuid>
+    <ProjectGuid>{FFD0EB45-0865-46DD-99C1-32D51264EB06}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AW.Model</RootNamespace>
@@ -49,67 +49,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdventureWorks2014.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorks2014.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AdventureWorks2014.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorks2014.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AdventureWorks2014.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdventureWorks2014.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Class1.cs" />
-    <Compile Include="Product.cs">
-      <DependentUpon>AdventureWorks2014.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ProductCategory.cs">
-      <DependentUpon>AdventureWorks2014.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ProductModel.cs">
-      <DependentUpon>AdventureWorks2014.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ProductReview.cs">
-      <DependentUpon>AdventureWorks2014.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ProductSubcategory.cs">
-      <DependentUpon>AdventureWorks2014.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="AdventureWorks2014.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AdventureWorks2014.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="AdventureWorks2014.edmx.diagram">
-      <DependentUpon>AdventureWorks2014.edmx</DependentUpon>
-    </None>
-    <None Include="App.config" />
+    <None Include="App.Config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AdventureWorks2014.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AdventureWorks2014.edmx</DependentUpon>
-      <LastGenOutput>AdventureWorks2014.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="AdventureWorks2014.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AdventureWorks2014.edmx</DependentUpon>
-      <LastGenOutput>AdventureWorks2014.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
