@@ -15,13 +15,14 @@ namespace AW.WCF.Dominio.Repositorio
         public Model.Product EncontrarProductoPorNumero(string elNumero)
         {
             Model.Product elProducto = new Model.Product();
-            elProducto = _Contexto.Product.Include("ProductSubCategory").Include("ProductModel").Include(" ProductReview").Include("ProductSubCategory.ProductCategory").Where(p => p.ProductNumber.Equals(elNumero)).FirstOrDefault();
+            elProducto = _Contexto.Products.Include("ProductSubCategory").Include("ProductModel").Include(" ProductReview").Include("ProductSubCategory.ProductCategory").Where(p => p.ProductNumber.Equals(elNumero)).FirstOrDefault();
+
             return elProducto;
         }
 
         public IList<Model.Product> BuscarProductoPorRangoDePrecio(decimal elPrecioInferior, decimal elPrecioSuperior)
         {
-            var losProductos = _Contexto.Product.Where(p => elPrecioInferior <= p.ListPrice && p.ListPrice <= elPrecioSuperior).ToList();
+            var losProductos = _Contexto.Products.Where(p => elPrecioInferior <= p.ListPrice && p.ListPrice <= elPrecioSuperior).ToList();
             return losProductos;
         }
     }
