@@ -25,6 +25,7 @@ namespace AdventureWorks
             //var products = db.Products.Include(p => p.ProductModel).Include(p => p.ProductSubcategory);
             return View(products.ToList());
         }
+        
 
         public ActionResult IndexViewModel()
         {
@@ -40,16 +41,74 @@ namespace AdventureWorks
 
         /**********************************************************************************************************/
 
-        public ActionResult IndexViewModel1()
+        public ActionResult IndexViewModelNombre()
         {
-            string nombre = "Cranka";
+            string elNombre = "Blade";
             var laAccion = new AW.WCF.Dominio.Acciones.Productos();
-            var products = laAccion.BuscarProductoPorNombre(nombre);
+            var products = laAccion.BuscarProductoPorNombre(elNombre);
             var laAccionViewModel = new Dominio.Acciones.ConvertirProductEnViewModel();
             var productsViewModel = laAccionViewModel.ConviertaListaDeProductos(products);
             return View(productsViewModel.ToList());
         }
 
+        public ActionResult IndexViewModelFechaV()
+        {
+            DateTime laFecha = new DateTime(2010, 05, 6, 00, 00, 00, 000);
+            var laAccion = new AW.WCF.Dominio.Acciones.Productos();
+            var products = laAccion.BuscarProductoPorFechaV(laFecha);
+            var laAccionViewModel = new Dominio.Acciones.ConvertirProductEnViewModel();
+            var productsViewModel = laAccionViewModel.ConviertaListaDeProductos(products);
+            return View(productsViewModel.ToList());
+        }
+
+        public ActionResult IndexViewModelColor()
+        {
+            string elColor = "BLUE";
+            var laAccion = new AW.WCF.Dominio.Acciones.Productos();
+            var products = laAccion.BuscarProductoPorColor(elColor);
+            var laAccionViewModel = new Dominio.Acciones.ConvertirProductEnViewModel();
+            var productsViewModel = laAccionViewModel.ConviertaListaDeProductos(products);
+            return View(productsViewModel.ToList());
+        }
+
+        public ActionResult IndexViewModelSubC()
+        {
+            string elNombre = "Est";
+            var laAccion = new AW.WCF.Dominio.Acciones.Productos();
+            var products = laAccion.BuscarProductoPorNombreSubC(elNombre);
+            var laAccionViewModel = new Dominio.Acciones.ConvertirProductEnViewModel();
+            var productsViewModel = laAccionViewModel.ConviertaListaDeProductos(products);
+            return View(productsViewModel.ToList());
+        }
+
+        public ActionResult IndexViewModelCat()
+        {
+            string elNombre = "Pon";
+            var laAccion = new AW.WCF.Dominio.Acciones.Productos();
+            var products = laAccion.BuscarProductoPorNombreC(elNombre);
+            var laAccionViewModel = new Dominio.Acciones.ConvertirProductEnViewModel();
+            var productsViewModel = laAccionViewModel.ConviertaListaDeProductos(products);
+            return View(productsViewModel.ToList());
+        }
+
+        public ActionResult IndexViewModelModel()
+        {
+            string elNombre = "Ea";
+            var laAccion = new AW.WCF.Dominio.Acciones.Productos();
+            var products = laAccion.BuscarProductoPorNombreM(elNombre);
+            var laAccionViewModel = new Dominio.Acciones.ConvertirProductEnViewModel();
+            var productsViewModel = laAccionViewModel.ConviertaListaDeProductos(products);
+            return View(productsViewModel.ToList());
+        }
+
+        public ActionResult IndexViewModelReview()
+        {
+            var laAccion = new AW.WCF.Dominio.Acciones.Productos();
+            var products = laAccion.BuscarProductoPorReview();
+            var laAccionViewModel = new Dominio.Acciones.ConvertirProductEnViewModel();
+            var productsViewModel = laAccionViewModel.ConviertaListaDeProductos(products);
+            return View(productsViewModel.ToList());
+        }
 
         /**********************************************************************************************************/
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 
 
-namespace ViewModels
+namespace AdventureWorks.ViewModels
 {
     public class ProductsViewModel
     {

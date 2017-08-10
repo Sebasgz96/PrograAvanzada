@@ -59,13 +59,13 @@ namespace AW.WCF.Dominio.Repositorio
 
         public IList<Model.Product> BuscarProductoPorNombreC(string elNombre)
         {
-            var losProductos = _Contexto.Products.Where(n => n.ProductSubcategory.Name.Contains(elNombre)).ToList();
+            var losProductos = _Contexto.Products.Where(n => n.ProductSubcategory.ProductCategory.Name.Contains(elNombre)).ToList();
             return losProductos;
         }
 
         public IList<Model.Product> BuscarProductoPorNombreSubC(string elNombre)
         {
-            var losProductos = _Contexto.Products.Where(n => n.ProductSubcategory.ProductCategory.Name.Contains(elNombre)).ToList();
+            var losProductos = _Contexto.Products.Where(n => n.ProductSubcategory.Name.Contains(elNombre)).ToList();
             return losProductos;
         }
 

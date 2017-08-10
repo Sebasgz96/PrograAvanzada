@@ -19,6 +19,7 @@ namespace AdventureWorks.Dominio.Acciones
                 elProductViewModel.ProductID = elProducto.ProductID;
                 elProductViewModel.ProductName = elProducto.Name;
                 elProductViewModel.ProductNumber = elProducto.ProductNumber;
+
                 if (elProducto.ProductModel != null)
                     elProductViewModel.ProductModelName = elProducto.ProductModel.Name;
                 else

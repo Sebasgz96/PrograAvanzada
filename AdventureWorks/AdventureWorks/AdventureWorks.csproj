@@ -271,6 +271,14 @@
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Products\IndexViewModelNombre.cshtml" />
+    <Content Include="Views\Products\IndexViewModelModel.cshtml" />
+    <Content Include="Views\Products\IndexViewModelFechaV.cshtml" />
+    <Content Include="Views\Products\IndexViewModelColor.cshtml" />
+    <Content Include="Views\Products\IndexViewModelSubC.cshtml" />
+    <Content Include="Views\Products\IndexViewModelCat.cshtml" />
+    <Content Include="Views\Products\IndexViewModelReview.cshtml" />
+    <Content Include="Views\Products\MisDetallesPorProductNumber.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
