@@ -38,6 +38,21 @@ namespace AdventureWorks
             return View(productsViewModel.ToList());
         }
 
+        /**********************************************************************************************************/
+
+        public ActionResult IndexViewModel1()
+        {
+            string nombre = "Cranka";
+            var laAccion = new AW.WCF.Dominio.Acciones.Productos();
+            var products = laAccion.BuscarProductoPorNombre(nombre);
+            var laAccionViewModel = new Dominio.Acciones.ConvertirProductEnViewModel();
+            var productsViewModel = laAccionViewModel.ConviertaListaDeProductos(products);
+            return View(productsViewModel.ToList());
+        }
+
+
+        /**********************************************************************************************************/
+
         // GET: Products/Details/5
         public ActionResult MisDetallesPorProductNumber(string productNumber)
         {

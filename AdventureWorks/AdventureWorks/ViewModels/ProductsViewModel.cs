@@ -16,5 +16,6 @@ namespace ViewModels
         public string ProductNumber { get; set; }
         public string Color { get; set; }
         public decimal ListPrice { get; set; }
+        public Nullable<System.DateTime> SellEndDate { get; set; }
     }
 }

@@ -28,6 +28,31 @@ namespace AW.WCF
         [OperationContract]
         IList<Model.Product> BuscarProductoPorRangoDePrecio(decimal elPrecioInferior, decimal elPrecioSuperior);
 
+        /***********************************************************************************************/
+
+        [OperationContract]
+        IList<Model.Product> BuscarProductoPorNombre(string elNombre);
+
+        [OperationContract]
+        IList<Model.Product> BuscarProductoPorFechaV(DateTime laFecha);
+
+        [OperationContract]
+        IList<Model.Product> BuscarProductoPorColor(string elColor);
+
+        [OperationContract]
+        IList<Model.Product> BuscarProductoPorNombreSubC(string elNombre);
+
+        [OperationContract]
+        IList<Model.Product> BuscarProductoPorNombreC(string elNombre);
+
+        [OperationContract]
+        IList<Model.Product> BuscarProductoPorNombreM(string elNombre);
+
+        [OperationContract]
+        IList<Model.Product> BuscarProductoPorReview();
+
+
+
         // TODO: Add your service operations here
     }
 

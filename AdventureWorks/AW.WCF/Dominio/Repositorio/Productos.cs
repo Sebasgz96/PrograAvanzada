@@ -36,5 +36,49 @@ namespace AW.WCF.Dominio.Repositorio
             var losProductos = _Contexto.Products.Where(p => elPrecioInferior <= p.ListPrice && p.ListPrice <= elPrecioSuperior).ToList();
             return losProductos;
         }
+
+        /**********************************************************************************************************/
+
+        public IList<Model.Product> BuscarProductoPorNombre(string elNombre)
+        {
+            var losProductos = _Contexto.Products.Where(n => n.Name.Contains(elNombre)).ToList();
+            return losProductos;
+        }
+
+        public IList<Model.Product> BuscarProductoPorFechaV(DateTime laFecha)
+        {
+            var losProductos = _Contexto.Products.Where(f => laFecha <= f.SellEndDate).ToList();
+            return losProductos;
+        }        
+
+        public IList<Model.Product> BuscarProductoPorColor(string elColor)
+        {
+            var losProductos = _Contexto.Products.Where(c => c.Color.Contains(elColor)).ToList();
+            return losProductos;
+        }
+
+        public IList<Model.Product> BuscarProductoPorNombreC(string elNombre)
+        {
+            var losProductos = _Contexto.Products.Where(n => n.ProductSubcategory.Name.Contains(elNombre)).ToList();
+            return losProductos;
+        }
+
+        public IList<Model.Product> BuscarProductoPorNombreSubC(string elNombre)
+        {
+            var losProductos = _Contexto.Products.Where(n => n.ProductSubcategory.ProductCategory.Name.Contains(elNombre)).ToList();
+            return losProductos;
+        }
+
+        public IList<Model.Product> BuscarProductoPorNombreM(string elNombre)
+        {
+            var losProductos = _Contexto.Products.Where(n => n.ProductModel.Name.Contains(elNombre)).ToList();
+            return losProductos;
+        }
+
+        public IList<Model.Product> BuscarProductoPorReview()
+        {
+            var losProductos = _Contexto.Products.Where(p => p.ProductID > 0).ToList();
+            return losProductos;
+        }
     }
 }

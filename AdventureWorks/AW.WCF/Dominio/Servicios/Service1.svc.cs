@@ -34,6 +34,62 @@ namespace AW.WCF
             return losProductos;
         }
 
+        /***************************************************************************************************/
+
+        public IList<Model.Product> BuscarProductoPorNombre(string elNombre)
+        {
+            var laAccion = new Dominio.Acciones.Productos();
+            var losProductos = laAccion.BuscarProductoPorNombre(elNombre);
+            return losProductos;
+        }
+
+        public IList<Model.Product> BuscarProductoPorFechaV(DateTime laFecha)
+        {
+            var laAccion = new Dominio.Acciones.Productos();
+            var losProductos = laAccion.BuscarProductoPorFechaV(laFecha);
+            return losProductos;
+        }
+
+        public IList<Model.Product> BuscarProductoPorColor(string elColor)
+        {
+            var laAccion = new Dominio.Acciones.Productos();
+            var losProductos = laAccion.BuscarProductoPorColor(elColor);
+            return losProductos;
+        }
+
+        public IList<Model.Product> BuscarProductoPorNombreSubC(string elNombre)
+        {
+            var laAccion = new Dominio.Acciones.Productos();
+            var losProductos = laAccion.BuscarProductoPorNombreSubC(elNombre);
+            return losProductos;
+        }
+
+        public IList<Model.Product> BuscarProductoPorNombreC(string elNombre)
+        {
+            var laAccion = new Dominio.Acciones.Productos();
+            var losProductos = laAccion.BuscarProductoPorNombreC(elNombre);
+            return losProductos;
+        }
+
+        public IList<Model.Product> BuscarProductoPorNombreM(string elNombre)
+        {
+            var laAccion = new Dominio.Acciones.Productos();
+            var losProductos = laAccion.BuscarProductoPorNombreM(elNombre);
+            return losProductos;
+        }
+
+        public IList<Model.Product> BuscarProductoPorReview()
+        {
+            var laAccion = new Dominio.Acciones.Productos();
+            var losProductos = laAccion.BuscarProductoPorReview();
+            return losProductos;
+        }
+
+
+        /**************************************************************************************************/
+
+
+
         public string GetData(int value)
         {
             return string.Format("You entered: {0}", value);
