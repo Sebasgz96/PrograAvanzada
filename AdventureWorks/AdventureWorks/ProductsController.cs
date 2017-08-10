@@ -93,7 +93,7 @@ namespace AdventureWorks
 
         public ActionResult IndexViewModelModel()
         {
-            string elNombre = "Ea";
+            string elNombre = "Oa";
             var laAccion = new AW.WCF.Dominio.Acciones.Productos();
             var products = laAccion.BuscarProductoPorNombreM(elNombre);
             var laAccionViewModel = new Dominio.Acciones.ConvertirProductEnViewModel();
